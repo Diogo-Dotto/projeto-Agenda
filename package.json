@@ -22,7 +22,6 @@
         "express": "^4.18.1",
         "express-flash": "^0.0.2",
         "express-session": "^1.18.0",
-        "helmet": "^7.1.0",
         "mongoose": "^8.4.3",
         "regenerator-runtime": "^0.13.9",
         "style-loader": "^3.3.1",

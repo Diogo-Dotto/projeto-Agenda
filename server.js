@@ -15,12 +15,12 @@ const mongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 const routes = require('./routes');
 const path = require('path');
-const helmet = require('helmet');
+//const helmet = require('helmet');
 const csrf = require('csurf');
 const { middlewareGloblal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware')
 
 
-app.use(helmet());
+//app.use(helmet());
 
 app.use(express.urlencoded({ extended: true }));
 
