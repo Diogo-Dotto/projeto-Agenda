@@ -1,7 +1,9 @@
 const Contato = require('../models/contatoModel')
 
 exports.index = (req, res) => {
-    res.render('contato');
+    res.render('contato', {
+        contato: {}
+    });
 };
 
 exports.register = async (req, res) => {
@@ -21,6 +23,18 @@ exports.register = async (req, res) => {
     } catch (e) {
         console.log(e);
         return res.render('404')
-    }
+    };
 
-}
+};
+
+exports.editIndex = async (req, res) => {
+    if (!req.params.id) return res.render('404');
+
+    const contato = await Contato.buscaPorId(req.params.id);
+
+    if (!contato) return res.render('404');
+
+    res.render('contato', {
+        contato
+    });
+};
