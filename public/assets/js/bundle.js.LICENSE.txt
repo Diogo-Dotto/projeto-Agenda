@@ -1,0 +1,5 @@
+/*!
+ * express-flash
+ * Copyright(c) 2012 RGBboy <me@rgbboy.com>
+ * MIT Licensed
+ */

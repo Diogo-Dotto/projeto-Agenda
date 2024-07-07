@@ -8,13 +8,14 @@
         <div class="col-lg-8 my-3">
           <h1 class="text-center">Contato</h1>
           <p class="text-center lead">Crie ou edite seu contato abaixo:</p>
+          <div class="error"></div>
 
           <%- include('includes/messages')%>
 
             <% if (contato._id) { %>
-              <form class="form-cadastro" action="/contato/edit/<%= contato._id %>" method="POST">
+              <form class="form-contato" action="/contato/edit/<%= contato._id %>" method="POST">
                 <% } else { %>
-                  <form class="form-cadastro" action="/contato/register" method="POST">
+                  <form class="form-contato" action="/contato/register" method="POST">
                     <% } %>
                       <input type="hidden" name="_csrf" value=<%=csrfToken %>>
                       <div class="form-group">

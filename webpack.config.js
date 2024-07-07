@@ -7,6 +7,9 @@ module.exports = {
     path: path.resolve(__dirname, 'public', 'assets', 'js'),
     filename: 'bundle.js'
   },
+  fallback: {
+    util: false  // Exemplo de exclusão do módulo 'util'
+},
   module: {
     rules: [{
       exclude: /node_modules/,
@@ -17,9 +20,6 @@ module.exports = {
           presets: ['@babel/env']
         }
       }
-    }, {
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader']
     }]
   },
   devtool: 'source-map'
